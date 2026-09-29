@@ -1,4 +1,5 @@
-from db_connection import get_connection
+from src.db_connection import get_connection
+
 #-------------manage transactin-----------
 #-----create
 class add_transaction:
@@ -9,7 +10,7 @@ class add_transaction:
          cursor.execute("USE lms")
   
          cursor.execute( 
-             "INSERT INTO members(trasaction_id,book_id,member_id,librarian_id,issue_date,return_date)\
+             "INSERT INTO transactions(transaction_id,book_id,member_id,librarian_id,issue_date,return_date)\
              VALUES (%s, %s, %s, %s, %s, %s)", 
              (trasaction_id,book_id,member_id,librarian_id,issue_date,return_date) 
          ) 

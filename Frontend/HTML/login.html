@@ -4,16 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+     <link rel="stylesheet" href="/Frontend/CSS/style.css">
 </head>
 <body>
+    <nav>
+        <div>Library Management System</div>
+    </nav>
+      <div class="sidebar">
+            <div class="menu"><a href="./homepage.html">Home</div></a>
+            <div class="menu"><a href="./login.html">Login</div></a>
+            <div class="menu"><a href="./admin_dashboard.html">Admin</div></a>
+            <div class="menu"><a href="./librarian_dashboard.html">Librarian</div></a>
+            <div class="menu"><a href="./books.html">Books</div></a>
+            <div class="menu"><a href="./members.html">Members</div></a>
+            
+        </div>
+        <div id="cont1">
     <div class="box1L">
-    <h1 id="title">Login</h1>
+    <h1 id="title1">Login</h1>
     <form action="">
-        <label for="username">Username</label>
+
+       <div class="log"> <label for="username">Username</label>
+        <input type="text"></div>
+        <br>
+        <div class="log"><label for="password">Password</label>
         <input type="text">
-        <label for="password">Password</label>
-        <button id="loginbutton">Enter</button>
+        </div>
+        <br>
+        <div class="log">
+       <button class="loginbutton"><a href="./admin_dashboard.html"> ADMIN</a></button>
+       <button class="loginbutton"><a href="./librarian_dashboard.html"> LIBRATIAN</a></button>
+        </div>
     </form>
+    </div>
     </div>
 </body>
 </html>

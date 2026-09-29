@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    background-color: #F8FAFC;
+    background-image: url(/Frontend/Assets/image.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    
+}
+nav{
+    height: 70px;
+    width: 100%;
+    background-color: brown;
+    color: #F8FAFC;
+    font-family: cursive;
+    text-align: center;
+    border-bottom: 3px solid white;
+    justify-content: center;
+    display: flex;
+    padding: 15px;
+}
+
+
+/* ===== Table theme ===== */
+.table-wrap {
+  margin: 20px;
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.55);
+  border: 2px solid #c0180f;
+  border-radius: 6px;
+}
+
+.lms-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Comic Sans MS", "Comic Neue", cursive;
+  font-size: 15px;
+}
+
+.lms-table thead th {
+  background: #c0180f;
+  color: #fff;
+  padding: 10px 12px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.lms-table td {
+  padding: 9px 12px;
+  color: #b3120a;
+  border-bottom: 1px solid rgba(192, 24, 15, 0.35);
+}
+
+.lms-table tbody tr:nth-child(even) { background: rgba(192, 24, 15, 0.08); }
+.lms-table tbody tr:hover { background: rgba(192, 24, 15, 0.2); }
+
+.lms-table caption {
+  caption-side: top;
+  background: #8f0f09;
+  color: #fff;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 13px;
+}
+.badge.ok   { background: #2e7d32; }
+.badge.warn { background: #ef8f00; }
+.badge.bad  { background: #8f0f09; }
+
+.btn-sm {
+  background: #c0180f;
+  color: #fff;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: inherit;
+  cursor: pointer;
+}
+.btn-sm:hover { background: #8f0f09; }
+
+
+
+    
+    
+
+
+.sidebar{
+    
+    float: left;
+    height: 100%;
+    color: #F8FAFC;
+    width: 20%;
+    background-color: rgba(255, 235, 205, 0.458);
+    text-align: center;
+    border-right: 3px solid brown;
+    
+    
+}
+.menu{
+    
+    width: 100%;
+    padding: 10px;
+    background-color:brown;
+    margin: 20px 0px 20px;
+    
+}
+.menu:hover{
+    color: brown;
+    border:2px solid brown;
+    background-color: white;
+    transition: 0.5s;
+}
+.menu:active{
+    color: brown;
+    border: 2px solid brown;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    color: #F8FAFC;
+    font-family: cursive;
+    
+    
+}
+a:hover{
+    color: brown;
+}
+#h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------homepage---------- */
+#homepage{
+   
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 500px;
+    /* margin: 20px; */
+    padding: 20px;
+    background-color: rgba(255, 228, 196, 0.451);
+    border-radius: 20px;
+    margin: 150px;
+    
+}
+.Home{
+    color: brown;
+    font-family: cursive;
+    text-align: center;
+    
+}
+button#b1{
+    
+    height: 70px;
+    width: 100px;
+    background-color: brown;
+    margin:50px 170px ;
+    border-radius: 10px;
+    transform: perspective(5px);
+    
+    
+    
+}
+#b1:hover{
+    background-color: #F8FAFC;
+    color: brown;
+}
+
+/* -------------loginpage---------- */
+#cont1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 400px;
+    margin: 150px ;
+    margin-left: 40%;
+    background-color: rgba(255, 235, 205, 0.426);
+    padding: 20px;
+    border-radius: 30px;
+}
+.box1L{
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    color: brown;
+    font-family: cursive;
+}
+.log{
+    max-resolution: 10px;
+}
+#title1{
+    margin: 20px;
+}
+
+.loginbutton{
+    height: 30px;
+    width: 90px;
+    background-color: brown;
+    color: #F8FAFC;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 5px;
+    font-family: cursive;
+}
+.loginbutton:hover{
+    background-color: #F8FAFC;
+    border: 2px solid brown;
+    color: brown;
+}
+/* ----------Everycontent------- */
+
+.content{
+    margin: 30px;
+    padding: 20px;
+    margin-left: 25%;
+    color: crimson;
+    font-family: cursive;
+    background-color: rgba(255, 228, 196, 0.425);
+    height: 90%;
+
+}
+
+/* -----------main----------- */
+
+.mtext{
+    margin-top: 20px;
+    
+}
+.AP{
+    color: #F8FAFC;
+    background-color: brown;
+    text-align: center;
+}

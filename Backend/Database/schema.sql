@@ -23,7 +23,9 @@ CREATE TABLE books(
    isbn VARCHAR(50),
    section VARCHAR(50),
    stock_count INT ,
-   status VARCHAR(50)
+   status VARCHAR(50),
+   
+   
 );
 
 CREATE Table members(
@@ -37,7 +39,7 @@ CREATE Table members(
 
 
 CREATE Table transactions(
-   trasaction_id INT AUTO_INCREMENT PRIMARY KEY,
+   transaction_id INT AUTO_INCREMENT PRIMARY KEY,
    book_id INT,
    member_id INT,
    librarian_id INT,
@@ -47,8 +49,12 @@ CREATE Table transactions(
    FOREIGN KEY(member_id)REFERENCES members(member_id),
    FOREIGN KEY(librarian_id)REFERENCES librarians(librarian_id)
 );
+USE lms;
+ALTER TABLE transactions
+CHANGE trasaction_id transaction_id INT AUTO_INCREMENT;
+
 SELECT TABLE_NAME,CONSTRAINT_NAME
 FROM information_schema.KEY_COLUMN_USAGE
-WHERE `REFERENCED_TABLE_NAME`="librariens";
+WHERE `REFERENCED_TABLE_NAME`="librarians";
 
 

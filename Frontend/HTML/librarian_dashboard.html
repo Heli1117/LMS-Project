@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Frontend/CSS/style.css">
+    
+</head>
+<body>
+    <nav>
+        <div>Library Management System</div>
+    </nav>
+      <div class="sidebar">
+            <div class="menu"><a href="./homepage.html">Home</div></a>
+            <div class="menu"><a href="./login.html">Login</div></a>
+            <div class="menu"><a href="./admin_dashboard.html">Admin</div></a>
+            <div class="menu"><a href="./librarian_dashboard.html">Librarian</div></a>
+            <div class="menu"><a href="./books.html">Books</div></a>
+            <div class="menu"><a href="./members.html">Members</div></a>
+            
+        </div>
+
+        <div class="content">
+    <h2 class="AP">LIBRARIAN PORTAL</h2>
+<p class="mtext"><h3>Welcome!
+    Here is an overview of your Library</h3>
+</p>
+<div class="table-wrap">
+  <table class="lms-table">
+    <caption>Recent Issued Books</caption>
+    <thead>
+      <tr><th>Issue ID</th><th>Member</th><th>Book</th><th>Issue Date</th><th>Due Date</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>I001</td><td>Anita Shah</td><td>Data Structures in C</td>
+        <td>2026-09-20</td><td>2026-10-04</td>
+        <td><span class="badge warn">Issued</span></td>
+      </tr>
+      <tr>
+        <td>I002</td><td>Kunal Mehta</td><td>Operating Systems</td>
+        <td>2026-09-10</td><td>2026-09-24</td>
+        <td><span class="badge bad">Overdue</span></td>
+      </tr>
+      <tr>
+        <td>I003</td><td>Riya Desai</td><td>Python Basics</td>
+        <td>2026-09-05</td><td>2026-09-19</td>
+        <td><span class="badge ok">Returned</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

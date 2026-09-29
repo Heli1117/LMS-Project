@@ -4,24 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/Frontend/CSS/style.css">
 </head>
 <body>
     <nav>
-        <div>Library Management System</div>
+        <div id="title"><h2>Library Management System</h2></div>
     </nav>
-    <div class="sidebar">
-        <div class="Title1">Title</div>
-        <a href="" class="menu">Dashboard</a>
-        <a href="" class="menu">Books</a>
-        <a href="" class="menu">Members</a>
-        <a href="" class="menu">Transactions</a>
-        <a href="" class="menu">Reports</a>
-        <a href="" class="menu">Logout</a>
-    </div>
-
-<p>Welcome!
-    Here is an overview of your Library
+   <div class="sidebar">
+            <div class="menu"><a href="./homepage.html">Home</div></a>
+            <div class="menu"><a href="./login.html">Login</div></a>
+            <div class="menu"><a href="./admin_dashboard.html">Admin</div></a>
+            <div class="menu"><a href="./librarian_dashboard.html">Librarian</div></a>
+            <div class="menu"><a href="./books.html">Books</div></a>
+            <div class="menu"><a href="./members.html">Members</div></a>
+            
+        </div>
+<div class="content">
+    <h2 class="AP">ADMIN PORTAL</h2>
+<p class="mtext"><h3>Welcome!
+    Here is an overview of your Library</h3>
 </p>
+<div class="table-wrap">
+  <table class="lms-table">
+    <caption>Library Overview</caption>
+    <thead>
+      <tr><th>Category</th><th>Total</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Total Books</td><td>1200</td></tr>
+      <tr><td>Total Members</td><td>350</td></tr>
+      <tr><td>Books Issued</td><td>85</td></tr>
+      <tr><td>Librarians</td><td>4</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="table-wrap">
+  <table class="lms-table">
+    <caption>Librarians</caption>
+    <thead>
+      <tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Status</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>L001</td><td>Ravi Patel</td><td>ravi@lms.com</td><td>9876543210</td>
+        <td><span class="badge ok">Active</span></td>
+        <td><button class="btn-sm">Edit</button> <button class="btn-sm">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
 <div id="managelibrarian">
     
 </div>
