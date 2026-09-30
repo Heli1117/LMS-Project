@@ -1,9 +1,9 @@
-from src.db_connection import get_connection
+from db_connection import get_connection
 
 #-------------manage transactin-----------
 #-----create
 class add_transaction:
-     def __init__(self,trasaction_id,book_id,member_id,librarian_id,issue_date,return_date):
+     def __init__(self,transaction_id,book_id,member_id,librarian_id,issue_date,return_date):
          conn = get_connection() 
          cursor = conn.cursor() 
     
@@ -12,7 +12,7 @@ class add_transaction:
          cursor.execute( 
              "INSERT INTO transactions(transaction_id,book_id,member_id,librarian_id,issue_date,return_date)\
              VALUES (%s, %s, %s, %s, %s, %s)", 
-             (trasaction_id,book_id,member_id,librarian_id,issue_date,return_date) 
+             (transaction_id,book_id,member_id,librarian_id,issue_date,return_date) 
          ) 
   
          conn.commit() 
@@ -22,7 +22,7 @@ class add_transaction:
 
 # ---------- READ (all) ---------- 
 
-def get_all_trasactions():
+def get_all_transactions():
     conn = get_connection() 
     cursor = conn.cursor() 
     
@@ -36,7 +36,7 @@ def get_all_trasactions():
     return rows
 # ---------- READ (one) ---------- 
 
-def get_one_trasactions():
+def get_one_transactions():
     conn = get_connection() 
     cursor = conn.cursor() 
     

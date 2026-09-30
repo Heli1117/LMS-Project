@@ -49,12 +49,8 @@ CREATE Table transactions(
    FOREIGN KEY(member_id)REFERENCES members(member_id),
    FOREIGN KEY(librarian_id)REFERENCES librarians(librarian_id)
 );
-USE lms;
-ALTER TABLE transactions
-CHANGE trasaction_id transaction_id INT AUTO_INCREMENT;
 
-SELECT TABLE_NAME,CONSTRAINT_NAME
-FROM information_schema.KEY_COLUMN_USAGE
-WHERE `REFERENCED_TABLE_NAME`="librarians";
+
+
 
 

@@ -1,4 +1,4 @@
-from src.db_connection import get_connection
+from db_connection import get_connection
 #-------------Manage members-----------
 #-----create
 class add_member:
