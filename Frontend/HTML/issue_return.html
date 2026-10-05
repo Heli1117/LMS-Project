@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue & Return</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <nav>
+        <div>Library Management System</div>
+    </nav>
+
+    <div class="sidebar">
+        <div class="menu"><a href="./login.html">Login</a></div>
+        <div class="menu"><a href="./admin_dashboard.html">Admin</a></div>
+        <div class="menu"><a href="./librarian_dashboard.html">Librarian</a></div>
+        <div class="menu"><a href="./books.html">Books</a></div>
+        <div class="menu"><a href="./members.html">Members</a></div>
+        <div class="menu"><a href="./issue_return.html">Issue &amp; Return</a></div>
+        <div class="menu"><a href="./logout.html">Logout</a></div>
+    </div>
+
+    <div class="content">
+        <h2 class="AP">ISSUE &amp; RETURN</h2>
+        <h3 class="mtext">Manage issued books and returns.</h3>
+
+        <div class="issue-return-grid">
+            <div class="card issue-panel">
+                <h2>Issue a book</h2>
+                <p class="muted">Find IDs on the <a href="{{ url_for('books') }}">Books</a> and <a href="{{ url_for('members') }}">Members</a> pages.</p>
+
+                <form method="POST" action="{{ url_for('issue') }}" class="issue-return-form">
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="book_id">Book ID</label>
+                            <input id="book_id" name="book_id" type="number" min="1" required>
+                        </div>
+                        <div class="field">
+                            <label for="member_id">Member ID</label>
+                            <input id="member_id" name="member_id" type="number" min="1" required>
+                        </div>
+                        <div class="field action-field">
+                            <button type="submit">Issue book</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card issue-panel">
+                <h2>Return a book</h2>
+
+                <form method="POST" action="{{ url_for('return_') }}" class="issue-return-form">
+                    <div class="form-row">
+                        <div class="field wide-field">
+                            <label for="transaction_id">Open transaction</label>
+                            <select id="transaction_id" name="transaction_id" required>
+                                <option value="{{ t.transaction_id }}">#{{ t.transaction_id }} - {{ t.title }} - {{ t.member_name }} (due {{ t.due_date }})</option>
+                            </select>
+                        </div>
+                        <div class="field action-field">
+                            <button type="submit">Return book</button>
+                        </div>
+                    </div>
+                </form>
+
+                <p class="empty">No books are out right now, so there is nothing to return.</p>
+            </div>
+
+            <div class="card issue-panel wide-panel">
+                <h2>Books currently issued</h2>
+                <div class="table-wrap">
+                    <table class="lms-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Book</th>
+                                <th>Member</th>
+                                <th>Issued</th>
+                                <th>Due</th>
+                                <th>State</th>
+                                <th>Fine so far</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ t.transaction_id }}</td>
+                                <td>{{ t.title }}</td>
+                                <td>{{ t.member_name }}</td>
+                                <td>{{ t.issue_date }}</td>
+                                <td>{{ t.due_date }}</td>
+                                <td>{% if t.state == 'Overdue' %}<span class="badge bad">Overdue</span>{% else %}<span class="badge ok">On loan</span>{% endif %}</td>
+                                <td>₹{{ t.fine }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

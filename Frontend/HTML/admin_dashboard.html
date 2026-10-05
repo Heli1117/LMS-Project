@@ -8,57 +8,74 @@
 </head>
 <body>
     <nav>
-        <div id="title"><h2>Library Management System</h2></div>
+        <div id="title"><h2>Library Management System</h2>
+        <h3>ADMIN DASHBOARD
+        </h3></div>
     </nav>
    <div class="sidebar">
-            <div class="menu"><a href="./homepage.html">Home</div></a>
-            <div class="menu"><a href="./login.html">Login</div></a>
-            <div class="menu"><a href="./admin_dashboard.html">Admin</div></a>
-            <div class="menu"><a href="./librarian_dashboard.html">Librarian</div></a>
-            <div class="menu"><a href="./books.html">Books</div></a>
-            <div class="menu"><a href="./members.html">Members</div></a>
-            
+            <div class="menu"><a href="./login.html">Login</a></div>
+            <div class="menu"><a href="./admin_dashboard.html">Admin</a></div>
+            <div class="menu"><a href="./librarian_dashboard.html">Librarian</a></div>
+            <div class="menu"><a href="./books.html">Books</a></div>
+            <div class="menu"><a href="./members.html">Members</a></div>
+            <div class="menu"><a href="./issue_return.html">Issue &amp; Return</a></div>
+            <div class="menu"><a href="./logout.html">Logout</a></div>
         </div>
 <div class="content">
-    <h2 class="AP">ADMIN PORTAL</h2>
+   
 <p class="mtext"><h3>Welcome!
     Here is an overview of your Library</h3>
 </p>
-<div class="table-wrap">
-  <table class="lms-table">
-    <caption>Library Overview</caption>
-    <thead>
-      <tr><th>Category</th><th>Total</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Total Books</td><td>1200</td></tr>
-      <tr><td>Total Members</td><td>350</td></tr>
-      <tr><td>Books Issued</td><td>85</td></tr>
-      <tr><td>Librarians</td><td>4</td></tr>
-    </tbody>
-  </table>
+
+<div class="card">
+  <h2>1200</h2>
+  <p>Total books</p>
+</div>
+<div class="card">
+  <h2>350</h2>
+  <p>Total members</p>
+</div>
+<div class="card">
+  <h2>85</h2>
+  <p>Books issued</p>
 </div>
 
-<div class="table-wrap">
-  <table class="lms-table">
-    <caption>Librarians</caption>
-    <thead>
-      <tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Status</th><th>Action</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>L001</td><td>Ravi Patel</td><td>ravi@lms.com</td><td>9876543210</td>
-        <td><span class="badge ok">Active</span></td>
-        <td><button class="btn-sm">Edit</button> <button class="btn-sm">Delete</button></td>
-      </tr>
-    </tbody>
-  </table>
+
+
+
+<div class="librarian-layout">
+  <div class="librarian-panel">
+    <div class="table-wrap librarian-table-panel">
+      <table class="lms-table">
+        <caption>Librarians</caption>
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Status</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>L001</td><td>Ravi Patel</td><td>ravi@lms.com</td><td>9876543210</td>
+            <td><span class="badge ok">Active</span></td>
+            <td><button class="btn-sm">Edit</button> <button class="btn-sm">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="managelibrarian">
+    <form action="" class="librarian-form">
+      <h2>Add Librarian</h2>
+      <div class="form-row">
+        <div><label for="librarian_name">Name</label><input id="librarian_name" name="librarian_name" type="text" required></div>
+        <div><label for="librarian_id">ID</label><input id="librarian_id" name="librarian_id" type="text" required></div>
+        <div><label for="librarian_email">Email</label><input id="librarian_email" name="librarian_email" type="email" required></div>
+        
+        <div><button type="submit" class="primary-btn">Add librarian</button></div>
+      </div>
+    </form>
+  </div>
 </div>
 
-</div>
-
-<div id="managelibrarian">
-    
 </div>
 </body>
 </html>
